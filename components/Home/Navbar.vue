@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar no-select">
+  <nav role="navigation" class="navbar no-select">
     <div class="navbar__wrapper">
       <!-- mobile -->
       <div class="navbar__toplayer">
@@ -16,7 +16,7 @@
          </span>
         </div>
         <div class="navbar__profilebox">
-          <img src="@/static/Profiles/user_1.jpg" alt="Profile Image" class="navbar__profilebox__img">
+          <img src="@/static/Profiles/user_1.jpg" draggable="false" alt="Profile Image" class="navbar__profilebox__img">
         </div>
       </div>
       <!-- desktop -->
