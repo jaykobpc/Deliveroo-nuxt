@@ -1,7 +1,177 @@
 .navbar {
-    padding: 0 16px;
+    top: 0;
 
     &__wrapper {
         @include flex-column;
+    }
+
+    &__toplayer {
+        display: none;
+
+        @include respond(tab-port) {
+            @include flex-row-spaced;
+            padding: 10px 8px;
+        }
+    }
+
+    &__locationbtn {
+        @include flex-row-centered;
+        cursor: pointer;
+
+        &__logo {
+            background-image: url('@/static/delivery-ride.svg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 30px;
+            height: 30px;
+        }
+
+        &__textbox {
+            margin: 0 12px;
+
+            &__smtitle {
+                font-size: 13px;
+                font-weight: 300;
+                color: var(--color-grey-600);
+            }
+
+            &__title {
+                font-size: 16px;
+                font-weight: 600;
+                color: var(--color-grey-700);
+            }
+        }
+
+        &__icon {
+            align-self: flex-end;
+            color: var(--color-theme-light-green);
+        }
+    }
+
+    &__profilebox {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: var(--color-grey-300);
+
+        &__img {
+            object-fit: cover;
+        }
+    }
+
+    //bottom layer
+    &__bottomlayer {
+        @include flex-row-centered-spaced;
+        border-bottom: 1px solid var(--color-grey-300);
+        padding: 0 32px;
+        height: 65px;
+
+        @include respond(tab-port) {
+            box-shadow: 0px 3px 2px -2px rgba(0, 0, 0, 0.15);
+            padding: 0px 8px;
+            height: 62px;
+            border-bottom: 0;
+        }
+
+        &__brandlogo {
+            background-image: url('@/static/deliveroo-logo-teal.svg');
+            width: 112px;
+            height: 32px;
+            margin: 0 10px 0 0;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 50%;
+            text-indent: -9999px;
+            overflow: hidden;
+            order: 1;
+
+            @include respond(tab-port) {
+                display: none;
+            }
+        }
+
+        &__searchbox {
+            order: 2;
+            flex: 0 1 700px;
+            position: relative;
+            @include flex-row-centered;
+
+            @include respond(tab-port) {
+                width: 100%;
+            }
+
+            &__icon {
+                color: var(--color-theme-light-green);
+                padding: 0 16px;
+                cursor: pointer;
+                font-size: 18px;
+
+                @include respond(tab-port) {
+                    position: absolute;
+                    right: 3px;
+                    top: 14px;
+                }
+            }
+        }
+
+        &__inputbox {
+            position: relative;
+            width: 100%;
+
+            @include respond(tab-port) {
+                flex: 0 0 100%;
+            }
+
+            &__icon {
+                color: var(--color-grey-600);
+                position: absolute;
+                left: 12px;
+                top: 16px;
+            }
+
+            &__input {
+                height: 48px;
+                width: 100%;
+                padding: 0 50px 0 40px;
+                border-radius: 3px;
+                font-size: 16px;
+                background-color: var(--color-grey-200);
+            }
+        }
+
+        &__widgets {
+            order: 3;
+            @include flex-row;
+            justify-content: flex-end;
+
+            @include respond(tab-port) {
+                display: none;
+            }
+        }
+
+        &__navbtn {
+            @include flex-row-centered;
+            border: 1px solid var(--color-grey-300);
+            padding: 8px 12px;
+            border-radius: 3px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: background-color 0.25s ease;
+
+            &:hover {
+                background-color: var(--color-grey-200);
+            }
+
+            i {
+                color: var(--color-theme-light-green);
+            }
+
+            span {
+                margin: 0 8px;
+                color: var(--color-grey-600);
+            }
+        }
     }
 }

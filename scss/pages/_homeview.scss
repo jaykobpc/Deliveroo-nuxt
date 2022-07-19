@@ -8,17 +8,25 @@
 
     &__layout {
         @include flex-row;
-        padding: 0 16px;
+        padding: 0 32px;
         height: 100%;
+
+        @include respond(tab-port) {
+            padding: 0px 8px;
+        }
 
         &__sidebar {
             flex: 0 0 260px;
-            background-color: teal;
+            // background-color: teal;
+            
+            @include respond(tab-port) {
+                display: none;
+            }
         }
 
         &__main {
             flex: 1;
-            background-color: red;
+            // background-color: red;
         }
     }
 }

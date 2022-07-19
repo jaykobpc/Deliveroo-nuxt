@@ -67,3 +67,9 @@
     align-items: center;
     justify-content: space-between;
 }
+
+@mixin flex-row-spaced {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
