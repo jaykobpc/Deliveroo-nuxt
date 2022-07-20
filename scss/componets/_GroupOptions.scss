@@ -1,9 +1,9 @@
 .groupoptions {
-    padding: 10px 0;
+    padding: 8px 0;
 
     &__wrapper {
         position: relative;
-        padding-right: 30px;
+        padding-right: 10px;
 
         @include respond(tab-port) {
             padding-right: 0;
@@ -13,7 +13,7 @@
 
     &__title {
         margin: 10px 0;
-        font-size: 22px;
+        font-size: 24px;
         font-weight: 600;
         color: var(--color-grey-700);
 
@@ -23,12 +23,16 @@
     }
 
     &__imagebox {
-        height: 90px;
+        padding-top: 56%;
         overflow: hidden;
         border-radius: 4px;
         position: relative;
         cursor: pointer;
         background-color: var(--color-grey-200);
+
+        @include respond(tab-port) {
+            padding-top: 63%;
+        }
 
         &__img {
             background: linear-gradient(rgba(0, 0, 0, 0.15),
@@ -52,7 +56,7 @@
             position: absolute;
 
             @include respond(tab-port) {
-                font-size: 16px;
+                font-size: 14px;
             }
         }
     }
@@ -60,7 +64,7 @@
     &__rightbtn {
         position: absolute;
         top: 65px;
-        right: 15px;
+        right: 10px;
         width: 40px;
         height: 40px;
         border-radius: 50%;

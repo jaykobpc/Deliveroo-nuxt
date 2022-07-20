@@ -13,7 +13,8 @@
                 </span>
                 <span
                   :style="`background-image: url(${require(`@/static/Restaurants/${item.restaurantLogo}`)})`"
-                  class="listview__card__imagebox__img"></span>
+                  class="listview__card__imagebox__img"
+                ></span>
                 <div class="listview__card__imagebox__timestamp">
                   <span>
                     <i class="bx bxs-timer"></i>
@@ -44,6 +45,14 @@
           </SwiperSlide>
         </Swiper>
       </div>
+      <!-- scrollbtn -->
+      <div
+        v-if="dataset.length > 5"
+        role="button"
+        :id="scrollNextId"
+        class="listview__wrapper__rightbtn">
+        <i class="bx bx-right-arrow-alt"></i>
+      </div>
     </div>
   </div>
 </template>
@@ -64,11 +73,14 @@ export default {
       default: "Title is required",
     },
     subtitle: {
-        type: String,
+      type: String,
     },
     dataset: {
       type: Array,
       required: true,
+    },
+    scrollNextId: {
+      type: String,
     },
   },
   data() {
@@ -101,7 +113,7 @@ export default {
           },
         },
         navigation: {
-          nextEl: "#groupOptionNext",
+          nextEl: `#${this.scrollNextId}`,
           prevEl: "#groupOptionPrev",
         },
       },

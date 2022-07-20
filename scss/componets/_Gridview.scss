@@ -1,0 +1,36 @@
+.gridview {
+    margin-bottom: 12px;
+
+    &__title {
+        margin: 5px 0;
+        font-size: 24px;
+        font-weight: 600;
+        color: var(--color-grey-700);
+
+        @include respond(tab-port) {
+            font-size: 18px;
+        }
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 12px;
+        row-gap: 10px;
+
+        @include respond(tab-port) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include respond(phone) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__card {
+        @include respond(phone) {
+            margin-bottom: 10px;
+        }
+    }
+}

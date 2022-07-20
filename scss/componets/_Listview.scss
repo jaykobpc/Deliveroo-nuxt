@@ -3,11 +3,43 @@
 
     &__wrapper {
         position: relative;
+        padding-right: 10px;
+        padding-left: 5px;
+
+        @include respond(tab-port) {
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+
+        &__rightbtn {
+            position: absolute;
+            top: 150px;
+            right: 10px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--color-white);
+            color: var(--color-theme-light-green);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+            cursor: pointer;
+            box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.15);
+
+            i {
+                font-size: 22px;
+            }
+
+            @include respond(tab-port) {
+                display: none;
+            }
+        }
     }
 
     &__title {
         margin: 5px 0;
-        font-size: 22px;
+        font-size: 24px;
         font-weight: 600;
         color: var(--color-grey-700);
 
@@ -42,6 +74,10 @@
             display: block;
             padding-top: 56%;
             overflow: hidden;
+
+            @include respond(tab-port) {
+                padding-top: 48%;
+            }
 
             &__img {
                 background-image: url('@/static/Restaurants/deliveroohop.jpeg');

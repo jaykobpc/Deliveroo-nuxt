@@ -1,5 +1,5 @@
 .homeview {
-    overflow-y: auto;
+    background-color: var(--color-grey-100);
 
     &__wrapper {
         @include flex-column;
@@ -11,12 +11,11 @@
         @include flex-row;
         width: 100%;
         height: 100%;
-
+        overflow-y: auto;
 
         &__sidebar {
             height: 100%;
             width: 400px;
-            background-color: gainsboro;
 
             @include respond(tab-port) {
                 display: none;
@@ -29,7 +28,7 @@
             overflow-y: auto;
 
             @include respond(tab-port) {
-                padding: 0px 5px 0 5px;
+                padding: 0px 10px 0 10px;
             }
         }
     }
