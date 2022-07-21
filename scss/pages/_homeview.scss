@@ -20,7 +20,7 @@
             @include flex-column;
             position: sticky;
 
-            @include respond(tab-port) {
+            @include respond(tab-land) {
                 display: none;
             }
 

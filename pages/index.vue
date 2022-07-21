@@ -9,7 +9,7 @@
             <AccordionListView />
           </div>
         </aside>
-        <section class="homeview__layout__main">
+        <main class="homeview__layout__main">
           <GroupOptions />
           <ListView
             title="Top picks in your neighbourhood"
@@ -33,7 +33,7 @@
             scrollNextId="mealDealsBtn"
           />
           <GridView :dataset="Populargrid" />
-        </section>
+        </main>
       </div>
     </div>
   </div>

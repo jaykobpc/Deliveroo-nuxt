@@ -98,8 +98,12 @@
             position: relative;
             @include flex-row-centered;
 
+            @include respond(tab-land) {
+                flex: 1 1 100%;
+            }
+
             @include respond(tab-port) {
-                width: 100%;
+                flex: 1 1 100%;
             }
 
             &__icon {

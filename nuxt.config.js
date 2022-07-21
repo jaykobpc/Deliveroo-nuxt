@@ -47,11 +47,15 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'en-UK'
+      lang: 'en-KE'
     }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+  //netlify fallback URL
+  generate: {
+    fallback: true
   }
 }
