@@ -131,8 +131,13 @@
 
         &__context {
             z-index: 10;
-            padding: 5px 8px;
+            padding: 5px 10px 20px 10px;
             @include flex-column;
+            height: 140px;
+
+            @include respond(tab-port) {
+                height: auto;
+            }
 
             &__title {
                 margin: 5px 0;
@@ -147,7 +152,7 @@
             }
 
             &__rating {
-                @include flex-row-centered;
+                @include flex-row;
                 font-size: 14px;
 
                 @include respond(tab-port) {
@@ -156,7 +161,7 @@
 
                 i {
                     color: var(--color-theme-ctx-green);
-                    align-self: flex-start;
+                    align-self: center;
                     font-size: 14px;
                 }
 
@@ -178,7 +183,7 @@
         &__delivery {
             @include flex-row-centered;
             font-size: 13px;
-            margin: 6px 0;
+            margin: 8px 0;
             color: var(--color-grey-700);
         }
     }
