@@ -15,10 +15,18 @@
 
         &__sidebar {
             height: 100%;
-            width: 400px;
+            flex: 1 1 380px;
+            padding: 30px 20px 0 40px;
+            @include flex-column;
+            position: sticky;
 
             @include respond(tab-port) {
                 display: none;
+            }
+
+            &__scrollview {
+                overflow-y: auto;
+                height: 100%;
             }
         }
 

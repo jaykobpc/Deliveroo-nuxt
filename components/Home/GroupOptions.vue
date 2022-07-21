@@ -1,6 +1,6 @@
 <template>
   <div class="groupoptions">
-    <div class="groupoptions__wrapper">
+    <div class="groupoptions__wrapper no-select">
       <h3 class="groupoptions__title">Delivering to The City</h3>
       <Swiper :options="swiperOptions">
         <SwiperSlide v-for="(item, index) in GroupOptions" :key="index">

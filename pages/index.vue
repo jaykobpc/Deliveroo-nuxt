@@ -4,15 +4,34 @@
       <navbar />
       <div class="homeview__layout">
         <aside class="homeview__layout__sidebar">
-          <h3>Sidebar</h3>
+          <SidebarLocation />
+          <div class="homeview__layout__sidebar__scrollview">
+            <AccordionListView />
+          </div>
         </aside>
         <section class="homeview__layout__main">
           <GroupOptions />
-          <ListView title="Top picks in your neighbourhood"  :dataset="NeighbourhoodData" />
-          <ListView title="Featured" subtitle="Paid placements from our partners" :dataset="FeaturedData" scrollNextId="featuredBtn" />
-          <ListView title="Offers near you" :dataset="FeaturedData" scrollNextId="OffersBtn" />
+          <ListView
+            title="Top picks in your neighbourhood"
+            :dataset="NeighbourhoodData"
+          />
+          <ListView
+            title="Featured"
+            subtitle="Paid placements from our partners"
+            :dataset="FeaturedData"
+            scrollNextId="featuredBtn"
+          />
+          <ListView
+            title="Offers near you"
+            :dataset="FeaturedData"
+            scrollNextId="OffersBtn"
+          />
           <GridView title="Popular brands" :dataset="Populargrid" />
-          <ListView title="Meal deals" :dataset="FeaturedData" scrollNextId="mealDealsBtn" />
+          <ListView
+            title="Meal deals"
+            :dataset="FeaturedData"
+            scrollNextId="mealDealsBtn"
+          />
           <GridView :dataset="Populargrid" />
         </section>
       </div>
@@ -24,11 +43,20 @@
 import Navbar from "@/components/Home/Navbar.vue";
 import GroupOptions from "@/components/Home/GroupOptions.vue";
 import ListView from "@/components/Home/ListView.vue";
-import GridView from '@/components/Home/Gridview.vue';
+import GridView from "@/components/Home/Gridview.vue";
+import SidebarLocation from "@/components/Home/SidebarLocation.vue";
+import AccordionListView from "@/components/Home/AccordionListview.vue";
 
 export default {
   name: "IndexPage",
-  components: { Navbar, GroupOptions, ListView, GridView, },
+  components: {
+    Navbar,
+    GroupOptions,
+    ListView,
+    GridView,
+    SidebarLocation,
+    AccordionListView,
+  },
   computed: {
     NeighbourhoodData() {
       return this.$store.state.Neighbourhood;
@@ -38,7 +66,7 @@ export default {
     },
     Populargrid() {
       return this.$store.state.PopularGrid;
-    }
-  }
+    },
+  },
 };
 </script>

@@ -1,0 +1,35 @@
+.accordionlistview {
+    @include flex-column;
+    overflow: hidden;
+    padding-top: 10px;
+
+    &__togglebtn {
+        @include flex-row-centered-spaced;
+        border: none;
+        height: 50px;
+        font-weight: 600;
+        color: var(--color-grey-700);
+        background-color: inherit;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        i {
+            transition: all 0.3s ease;
+            color: var(--color-theme-light-green);
+            font-size: 22px;
+        }
+    }
+
+    &__grouplist {
+        @include flex-column;
+    }
+}
+
+.accordion__open {
+    transition: all 0.3s ease;
+
+    i {
+        transform: rotate(180deg);
+    }
+}

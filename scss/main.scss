@@ -4,9 +4,12 @@
 @import './base/base';
 @import './base/typography';
 
-@import "./componets/Gridview";
-@import "./componets/navbar";
-@import "./componets/GroupOptions";
-@import "./componets/Listview";
+@import './components/AccordionListView';
+@import "./components/Checkbox";
+@import "./components/Gridview";
+@import "./components/navbar";
+@import "./components/GroupOptions";
+@import "./components/Listview";
+@import "./components/SidebarLocation";
 
 @import './pages/homeview';
