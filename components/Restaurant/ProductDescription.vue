@@ -4,7 +4,7 @@
         <div role="img" class="productdescription__imagebox"></div>
         <div class="productdescription__context">
             <div class="productdescription__textview">
-                <h3 class="productdescription__textview__title">B Bagel Bakery Bar - Tottenham Court Road</h3>
+                <h3 class="productdescription__textview__title">Fireaway Pizza - Surrey Quays</h3>
                 <div class="productdescription__group">
                     <span>30 - 50 min · </span>
                     <span>Bagels · </span>

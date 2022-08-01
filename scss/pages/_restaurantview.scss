@@ -1,0 +1,22 @@
+.restaurantview {
+
+    &__nav {
+        padding: 20px 90px;
+
+        &__button {
+            width: 45px;
+            height: 45px;
+            border: none;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 20px;
+            color: var(--color-theme-light-green);
+            background-color: var(--color-grey-100);
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: var(--color-grey-200);
+            }
+        }
+    }
+}
