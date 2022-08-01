@@ -1,5 +1,5 @@
 <template>
-  <div class="restaurantview">
+  <div class="restaurantview" safe-area-view="yes">
     <Navbar />
     <div class="restaurantview__nav">
       <button @click="pushBack" class="restaurantview__nav__button">
