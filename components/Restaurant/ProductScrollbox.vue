@@ -1,5 +1,5 @@
 <template>
-  <div role="presentation" class="productscrollbox">
+  <div role="presentation" class="productscrollbox no-select">
     <div class="productscrollbox__wrapper">
       <span
         v-for="(item, index) in groups"

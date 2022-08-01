@@ -8,6 +8,9 @@
     </div>
     <ProductDescription />
     <ProductScrollbox />
+    <div class="restaurantview__groupwrapper">
+      <ProductGroupBox />
+    </div>
   </div>
 </template>
 
@@ -15,6 +18,7 @@
 import Navbar from "@/components/Navigation/Navbar.vue";
 import ProductDescription from "@/components/Restaurant/ProductDescription.vue";
 import ProductScrollbox from "@/components/Restaurant/ProductScrollbox.vue";
+import ProductGroupBox from '@/components/Restaurant/ProductGroupBox.vue';
 
 export default {
   name: "Restaurant",
@@ -22,6 +26,7 @@ export default {
     Navbar,
     ProductDescription,
     ProductScrollbox,
+    ProductGroupBox,
   },
   methods: {
     pushBack() {
