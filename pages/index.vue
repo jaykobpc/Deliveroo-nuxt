@@ -40,11 +40,11 @@
 </template>
 
 <script>
-import Navbar from "@/components/Home/Navbar.vue";
+import Navbar from "@/components/Navigation/Navbar.vue";
 import GroupOptions from "@/components/Home/GroupOptions.vue";
 import ListView from "@/components/Home/ListView.vue";
 import GridView from "@/components/Home/Gridview.vue";
-import SidebarLocation from "@/components/Home/SidebarLocation.vue";
+import SidebarLocation from "@/components/Navigation/SidebarLocation.vue";
 import AccordionListView from "@/components/Home/AccordionListview.vue";
 
 export default {

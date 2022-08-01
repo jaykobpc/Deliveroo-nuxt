@@ -6,20 +6,20 @@
       <div class="listview__swiper">
         <Swiper :options="swiperOptions">
           <SwiperSlide v-for="(item, index) in dataset" :key="index">
-            <div class="listview__card">
+            <router-link to="/restaurant" class="listview__card">
               <div class="listview__card__imagebox">
                 <span class="listview__card__imagebox__badge">
                   <p>{{ item.deliveryFee }}</p>
                 </span>
                 <span
                   :style="`background-image: url(${require(`@/static/Restaurants/${item.restaurantLogo}`)})`"
-                  class="listview__card__imagebox__img"
-                ></span>
+                  class="listview__card__imagebox__img">
+                </span>
                 <div class="listview__card__imagebox__timestamp">
                   <span>
                     <i class="bx bxs-timer"></i>
                   </span>
-                  <span>{{ item.duration }} min</span>
+                  <span class="text-gray-600">{{ item.duration }} min</span>
                 </div>
               </div>
               <div class="listview__card__context">
@@ -41,7 +41,7 @@
                   </span>
                 </div>
               </div>
-            </div>
+            </router-link>
           </SwiperSlide>
         </Swiper>
       </div>
@@ -50,7 +50,8 @@
         v-if="dataset.length > 5"
         role="button"
         :id="scrollNextId"
-        class="listview__wrapper__rightbtn">
+        class="listview__wrapper__rightbtn"
+      >
         <i class="bx bx-right-arrow-alt"></i>
       </div>
     </div>

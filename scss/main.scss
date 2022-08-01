@@ -3,6 +3,7 @@
 
 @import './base/base';
 @import './base/typography';
+@import "./base/utilities";
 
 @import './components/AccordionListView';
 @import "./components/Checkbox";
@@ -10,6 +11,8 @@
 @import "./components/navbar";
 @import "./components/GroupOptions";
 @import "./components/Listview";
+@import "./components/ProductDescription";
+@import "./components/ProductScrollbox";
 @import "./components/SidebarLocation";
 
 @import './pages/homeview';
